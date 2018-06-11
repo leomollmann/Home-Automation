@@ -1,0 +1,121 @@
+---- sistema uintx_t: ok
+---- orientação a objetos: ok
+---- sistema de tempo > 40 anos: ok
+
+  Seconds = millis() / 1000;
+  Millis = millis() % 1000;
+
+---- acionamento de relé rápido(manipulação de registers)(true c): ok
+
+PORTD
+DDRD
+
+---- sistema de armazenamento dinâmico:
+
+int freeRam () {
+  extern int __heap_start, *__brkval; 
+  int v; 
+  return (int) &v - (__brkval == 0 ? (int) &__heap_start : (int) __brkval); 
+}
+
+---- calibrar sensor de temperatura interno:
+
+double GetTemp()
+{
+  unsigned int wADC;
+  double t;
+  ADMUX = (_BV(REFS1) | _BV(REFS0) | _BV(MUX3));
+  ADCSRA |= _BV(ADEN);
+  delay(20);
+  ADCSRA |= _BV(ADSC);
+  while (bit_is_set(ADCSRA,ADSC));
+  wADC = ADCW;
+  t = (wADC - 324.31 ) / 1.22; <---- peso a ser calibrado
+  return (t);
+}
+
+---- Queue das tarefas: 
+---- Reset arduino: ok
+
+#include <avr/wdt.h>
+
+wdt_disable();
+
+void Reset(){
+  wdt_enable(WDTO_1S);
+  delay(1000);
+}
+
+---- time ofset:
+---- sistema multicast com id:
+---- auto acknolagement:
+---- função repeat manager:
+---- listagem de comandos: ok
+
+	Módulos
+
+core -----------
+	Read Sensors
+	Write Data
+	Errase Data
+	Errase all
+	Reset
+	Reboot
+single ---------
+	Read Relay
+	Read Sensors
+	Write Data
+	Errase Data
+	On
+	Off
+	Errase all
+	Reset
+	Reboot
+multi ----------
+	Read Relay
+	Read Sensors
+	Write Data
+	Errase Data
+	On
+	Off
+	Errase all
+	Reset
+	Reboot
+IR -------------
+	Read Sensors
+	Send Data
+	Write Data
+	Errase Data
+	Send Command
+	Errase all
+	Reset
+	Reboot
+Light ----------
+	Read Cicle
+	Read Sensors
+	Write Data
+	Errase Data
+	dimm
+	Errase all
+	Reset
+	Reboot
+Fan ------------
+	Read Cicle
+	Read Sensors
+	Write Data
+	Errase Data
+	dimm
+	Errase all
+	Reset
+	Reboot
+--------------------------------
+
+---- tipo de agendamento nº de bytes usados: ok
+
+sem repeat
+
+uint32_t segundos
+uint8_t rele + estado (register bitmath)
+ 
+
+

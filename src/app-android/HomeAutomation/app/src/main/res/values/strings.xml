@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HomeAutomation</string>
+    <string name="welcome">Bem vindo, descubra o que uma casa da era da informação pode fazer por você.</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="btn1">Tomada Esquerda</string>
+    <string name="btn2">Tomada Inferior</string>
+    <string name="btn3">Tomada Direita</string>
+    <string name="watts">watts</string>
+    <string name="temp">temp</string>
+    <string name="confirm">Salvar</string>
+    <string name="empty">Nenhum item adicionado...</string>
+    <string name="add">Adicionar</string>
+    <string name="rmv">Remover</string>
+    <string name="name">Nome</string>
+    <string name="locale">Localização</string>
+    <string name="Telefone">Telefone</string>
+    <string name="Senha">Senha</string>
+    <string name="Nome">Nome</string>
+    <string name="cadastrar">Cadastrar</string>
+</resources>

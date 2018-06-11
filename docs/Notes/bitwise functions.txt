@@ -1,0 +1,100 @@
+--------------- ARDUINO -----------------
+long RecieveLong(){
+  unsigned char c[4];
+  c[3] = Serial.read();
+  c[2] = Serial.read();
+  c[1] = Serial.read();
+  c[0] = Serial.read();
+  unsigned long val;
+  val |= (c[3] &0xFF);
+  val <<= 8;
+  val |= (c[2] &0xFF);
+  val <<= 8;
+  val |= (c[1] &0xFF);
+  val <<= 8;
+  val |= (c[0] &0xFF);
+  return val;
+}
+
+void SendLong(long val){
+  unsigned char c[4];
+  c[3] = (val & 0xFF);
+  val >>= 8;
+  c[2] = (val & 0xFF);
+  val >>= 8;
+  c[1] = (val & 0xFF);
+  val >>= 8;
+  c[0] = (val & 0xFF);
+  Serial.write(c[0]);
+  Serial.write(c[1]);
+  Serial.write(c[2]);
+  Serial.write(c[3]);
+}
+
+int RecieveInt(){
+  unsigned char c[4];
+  c[1] = Serial.read();
+  c[0] = Serial.read();
+  int val;
+  val |= (c[1] &0xFF);
+  val <<= 8;
+  val |= (c[0] &0xFF);
+  return val;
+}
+
+void SendInt(int val){
+  unsigned char c[4];
+  c[1] = (val & 0xFF);
+  val >>= 8;
+  c[0] = (val & 0xFF);
+  Serial.write(c[0]);
+  Serial.write(c[1]);
+}
+---------------- PROCESSING --------------
+int RecieveLong(){
+  char[] c = new char[4];
+  c[3] = (char)serial.read();
+  c[2] = (char)serial.read();
+  c[1] = (char)serial.read();
+  c[0] = (char)serial.read();
+  int val = 0;
+  val |= (c[3] &0xFF);
+  val <<= 8;
+  val |= (c[2] &0xFF);
+  val <<= 8;
+  val |= (c[1] &0xFF);
+  val <<= 8;
+  val |= (c[0] &0xFF);
+  return val;
+}
+
+void SendLong(int val){
+  byte b[] = new byte[4];
+  b[3] = (byte)(val & 0xFF);
+  val >>= 8;
+  b[2] = (byte)(val & 0xFF);
+  val >>= 8;
+  b[1] = (byte)(val & 0xFF);
+  val >>= 8;
+  b[0] = (byte)(val & 0xFF);
+  serial.write(b);
+}
+
+int RecieveInt(){
+  char[] c = new char[4];
+  c[1] = (char)serial.read();
+  c[0] = (char)serial.read();
+  int val = 0;
+  val |= (c[1] &0xFF);
+  val <<= 8;
+  val |= (c[0] &0xFF);
+  return val;
+}
+
+void SendInt(int val){
+  byte b[] = new byte[4];
+  b[1] = (byte)(val & 0xFF);
+  val >>= 8;
+  b[0] = (byte)(val & 0xFF);
+  serial.write(b);
+}

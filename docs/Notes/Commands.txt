@@ -1,0 +1,67 @@
+
+	Módulos
+
+core -----------
+	Read Sensors
+	Write Data
+	Errase Data
+	Errase all
+	Reset
+	Reboot
+single ---------
+	Read Relay
+	Read Sensors
+	Write Data
+	Errase Data
+	On
+	Off
+	Errase all
+	Reset
+	Reboot
+multi ----------
+	Read Relay
+	Read Sensors
+	Write Data
+	Errase Data
+	On
+	Off
+	Errase all
+	Reset
+	Reboot
+IR -------------
+	Read Sensors
+	Send Data
+	Write Data
+	Errase Data
+	Send Command
+	Errase all
+	Reset
+	Reboot
+Light ----------
+	Read Cicle
+	Read Sensors
+	Write Data
+	Errase Data
+	dimm
+	Errase all
+	Reset
+	Reboot
+Fan ------------
+	Read Cicle
+	Read Sensors
+	Write Data
+	Errase Data
+	dimm
+	Errase all
+	Reset
+	Reboot
+--------------------------------
+
+	Dados
+
+	Read Sensors
+		float internalTemp(0 , max)
+		float Temp(0 , max)
+		float Amps(0 , max)
+		
+	(min pwm duty cicle --%, max pwm duty cicle 100%)

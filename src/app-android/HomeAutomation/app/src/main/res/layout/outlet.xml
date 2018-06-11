@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/background_list"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/txtSetTemp"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imgTemp"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocal"
+        app:layout_constraintVertical_bias="0.85"
+        android:layout_marginLeft="-10dp" />
+
+    <ImageView
+        android:id="@+id/imgTemp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:contentDescription="@string/temp"
+        app:srcCompat="@drawable/ic_temp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocal"
+        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintLeft_toRightOf="@+id/imgbPlug2"
+        android:layout_marginLeft="25dp" />
+
+    <TextView
+        android:id="@+id/txtEnergy"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocal"
+        app:layout_constraintLeft_toRightOf="@+id/imgEnergy"
+        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgEnergy"
+        android:contentDescription="@string/watts"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:srcCompat="@drawable/ic_electric"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocal"
+        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintLeft_toRightOf="@+id/txtSetTemp"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        android:layout_marginTop="2dp" />
+
+    <ImageButton
+        android:id="@+id/imgbPlug3"
+        android:contentDescription="@string/btn1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/txtName"
+        app:layout_constraintLeft_toRightOf="@+id/imgbPlug1"
+        android:layout_marginTop="2dp"
+        app:layout_constraintHorizontal_bias="0.218" />
+
+    <ImageButton
+        android:id="@+id/imgbPlug1"
+        android:contentDescription="@string/btn2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp" />
+
+    <ImageButton
+        android:id="@+id/imgbPlug2"
+        android:contentDescription="@string/btn3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:adjustViewBounds="true"
+        app:layout_constraintRight_toRightOf="@+id/imgbPlug3"
+        app:layout_constraintLeft_toLeftOf="@+id/imgbPlug1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbPlug1"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:id="@+id/txtLocal"
+        android:layout_width="100dp"
+        android:layout_height="18dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/ic_settings"
+        app:layout_constraintLeft_toRightOf="@+id/txtName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>

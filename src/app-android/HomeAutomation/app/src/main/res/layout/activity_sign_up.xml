@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cognito.homeautomation.View.SignUp"
+    android:background="@color/background_color">
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="343dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/mybutton"
+        android:text="@string/cadastrar"
+        android:textColor="@color/text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTelephone"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="302dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:ems="10"
+        android:hint="@string/Nome"
+        android:textColor="@color/text_color"
+        android:textColorHint="?attr/colorButtonNormal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="58dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.502" />
+
+    <EditText
+        android:id="@+id/edtPassW"
+        android:layout_width="302dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:ems="10"
+        android:hint="@string/Senha"
+        android:textColor="@color/text_color"
+        android:inputType="textPassword"
+        android:textColorHint="?attr/colorButtonNormal"
+        android:layout_marginTop="31dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtName"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.502" />
+
+    <EditText
+        android:id="@+id/edtTelephone"
+        android:layout_width="302dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:ems="10"
+        android:hint="@string/Telefone"
+        android:textColor="@color/text_color"
+        android:inputType="phone"
+        android:textColorHint="?attr/colorButtonNormal"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassW"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.502" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/ic_user"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/edtName"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/edtName"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/edtName"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="@+id/edtName"
+        android:layout_marginTop="8dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/ic_pass"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/edtPassW"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/edtPassW"
+        app:layout_constraintBottom_toBottomOf="@+id/edtPassW"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="@+id/edtPassW"
+        android:layout_marginTop="8dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_phone"
+        app:layout_constraintBottom_toBottomOf="@+id/edtTelephone"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/edtTelephone"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/edtTelephone"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="@+id/edtTelephone"
+        android:layout_marginTop="8dp" />
+
+</android.support.constraint.ConstraintLayout>

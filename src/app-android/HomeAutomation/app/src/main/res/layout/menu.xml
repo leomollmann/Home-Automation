@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/background_color">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:layout_marginRight="66dp"
+        android:text="Temperatura"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imgTemperatura"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtServer" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:layout_marginRight="66dp"
+        android:text="Janelas"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <ImageButton
+        android:id="@+id/imgTemperatura"
+        android:layout_width="56dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="7dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/ic_tempconfig"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
+        android:layout_marginTop="0dp"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <ImageButton
+        android:id="@+id/imgJanelas"
+        android:layout_width="56dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_window" />
+
+    <TextView
+        android:id="@+id/txtServer"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:text="Servidor"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="30sp"
+        android:layout_marginRight="66dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="26dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtRemote" />
+
+    <TextView
+        android:id="@+id/txtRemote"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:text="Controle remoto"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="30sp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtTomada"
+        android:layout_marginRight="66dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTomada"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:text="Tomadas T"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="30sp"
+        android:layout_marginRight="66dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="26dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtLampada" />
+
+    <ImageButton
+        android:id="@+id/imgLampada"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLampada"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtLampada"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_bulb" />
+
+    <ImageButton
+        android:id="@+id/imgTomada"
+        android:layout_width="52dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTomada"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTomada"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_outlet" />
+
+    <ImageButton
+        android:id="@+id/imgRemote"
+        android:layout_width="55dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRemote"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtRemote"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_ir" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="56dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/txtServer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtServer"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_server"
+        tools:layout_editor_absoluteY="288dp" />
+
+    <TextView
+        android:id="@+id/txtLampada"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:text="Lâmpadas"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="30sp"
+        android:layout_marginRight="66dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="34dp" />
+</android.support.constraint.ConstraintLayout>
