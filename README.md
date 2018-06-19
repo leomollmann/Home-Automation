@@ -1,2 +1,2 @@
 # Home-Automation
-A new way to automate a house
+A new way to automate a home
